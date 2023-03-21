@@ -1,0 +1,32 @@
+<div class="background">
+  <!--მატ პანელის სანავიგაციო მხარე-->
+  <nav>
+    <mat-accordion>
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            See Every Available Tour here
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <ul>
+          <li>
+            <a routerLink="tbilisi">tbilisi-mtskheta</a>
+          </li>
+          <li>
+            <a routerLink="kazbegi">kazbegi</a>
+          </li>
+          <li>
+            <a routerLink="kakheti">kakheti</a>
+          </li>
+          <li>
+            <a routerLink="borjomi">borjomi</a>
+          </li>
+        </ul>
+      </mat-expansion-panel>
+    </mat-accordion>
+  </nav>
+  <!--შიდა როუტებით იცვლება ტურების კონტენტი-->
+  <div class="container">
+    <router-outlet></router-outlet>
+  </div>
+</div>

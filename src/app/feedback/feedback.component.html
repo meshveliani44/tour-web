@@ -1,0 +1,74 @@
+<div class="background">
+  <!-- პირველი საფეხური: სახელი -->
+  <mat-stepper [linear]="isLinear" #stepper>
+    <mat-step [stepControl]="firstFormGroup">
+      <form [formGroup]="firstFormGroup">
+        <ng-template matStepLabel>type your name</ng-template>
+        <mat-form-field appearance="fill">
+          <mat-label>Name</mat-label>
+          <input matInput placeholder="Firstname" formControlName="FirstName">
+        </mat-form-field>
+        <div>
+          <button mat-button matStepperNext type="button">Next</button>
+        </div>
+      </form>
+    </mat-step>
+    <!-- მეორე საფეხური: გვარი -->
+    <mat-step [stepControl]="secondFormGroup" label="type your last name">
+      <form [formGroup]="secondFormGroup">
+        <mat-form-field appearance="fill">
+          <mat-label>last name</mat-label>
+          <input matInput formControlName="LastName" placeholder="Last name"
+                 required>
+        </mat-form-field>
+        <div>
+          <button mat-button matStepperPrevious>Back</button>
+          <button mat-button matStepperNext type="button">Next</button>
+        </div>
+      </form>
+    </mat-step>
+
+    <!-- მესამე საფეხური: თარიღი -->
+
+    <mat-step [stepControl]="thirdFormGrup" label="pick a date">
+      <form [formGroup]="thirdFormGrup">
+        <mat-form-field appearance="fill">
+          <mat-label>Choose a date</mat-label>
+          <input matInput [matDatepicker]="picker"  formControlName="Date">
+          <mat-hint>MM/DD/YYYY</mat-hint>
+          <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+        <div>
+          <button mat-button matStepperPrevious>Back</button>
+          <button mat-button matStepperNext type="button">Next</button>
+        </div>
+      </form>
+    </mat-step>
+
+    <!-- მეოთხე საფეხური: კომენტარის დატოვება -->
+    <mat-step [stepControl]="forthFormGroup" label="leave a comment">
+      <form [formGroup]="forthFormGroup" (ngSubmit)="submitedData()">
+        <mat-form-field class="example-full-width">
+          <mat-label>Leave a comment</mat-label>
+          <textarea matInput formControlName="Comment" placeholder=""></textarea>
+        </mat-form-field>
+        <div>
+          <button mat-button matStepperPrevious>Back</button>
+          <button mat-button matStepperNext type="submit">Finish</button>
+        </div>
+      </form>
+    </mat-step>
+
+    <!-- ფინალური ნაწილი ბოლო ღილაკით ხდება ყველა ველიუს გაგზავნა ფაიერბეიზში -->
+    <mat-step>
+      <ng-template matStepLabel>Done</ng-template>
+      <p>we appreciate your opinion</p>
+      <p>Thak you <3</p>
+      <div>
+        <button mat-button matStepperPrevious>Back</button>
+        <button mat-button (click)="stepper.reset()">Reset</button>
+      </div>
+    </mat-step>
+  </mat-stepper>
+</div>

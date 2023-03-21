@@ -1,0 +1,33 @@
+nav {
+  background-color: rgb(50, 57, 45);
+  height: 7vh;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  font-family: 'Righteous', cursive;
+
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+
+    li {
+      margin: 0 10px;
+
+      a {
+        color: rgb(171, 202, 217);
+        text-decoration: none;
+        padding: 15px 20px;
+        display: inline-block;
+        height: 7vh;
+        font-size: 2.5vh;
+
+        &:hover {
+          background-color: rgb(64, 71, 59);
+        }
+      }
+    }
+  }
+}

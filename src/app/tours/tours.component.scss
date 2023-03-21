@@ -1,0 +1,52 @@
+.background {
+  width: 100%;
+  height: 93vh;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  align-items: center;
+  background: rgb(87, 96, 82);
+
+  nav {
+    width: 25%;
+    height: 70vh;
+    //background: yellow;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+
+    mat-expansion-panel {
+      background: #333333;
+
+      mat-panel-title {
+        font-family: 'Righteous', cursive;
+        font-size: 17px;
+        color: white;
+
+        .mat-expansion-indicator {
+          background-color: white !important;
+        }
+      }
+    }
+
+    ul {
+      list-style-type: none;
+      height: 56vh;
+      //background: aqua;
+      a {
+        text-decoration: none;
+        font-size: 20px;
+        font-family: 'Righteous', cursive;
+        color: white;
+      }
+    }
+  }
+
+  .container {
+    width: 60%;
+    height: 70vh;
+    margin: 0;
+  }
+
+
+}
