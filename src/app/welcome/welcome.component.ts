@@ -6,12 +6,12 @@ import {Router} from "@angular/router";
   templateUrl: './welcome.component.html',
   styleUrls: ['./welcome.component.scss']
 })
-export class WelcomeComponent implements OnInit {
+export class WelcomeComponent   {
+alhabet = ['ა','ბ','გ','დ','ე','ვ','ზ','თ','ი','ლ','მ','ნ','ო','პ','ჟ','რ','ს','ტ','უ','ფ','ქ','ღ','ყ','შ','ჩ','ც','ძ','წ','ჭ','ხ','ჯ','ჰ']
 
   constructor(private router: Router) { }
 
-  ngOnInit(): void {
-  }
+
 
 kakheti(){
     this.router.navigate(['tours/kakheti'])

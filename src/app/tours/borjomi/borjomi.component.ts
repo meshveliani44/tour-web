@@ -7,9 +7,29 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BorjomiComponent implements OnInit {
 
-  constructor() { }
+
 
   ngOnInit(): void {
+    // this.printNextCharacter()
+
   }
+
+
+  textToPrint: string = "each  char text";
+  printInterval: number = 100;
+
+  currentIndex: number = 0;
+
+   // printNextCharacter() {
+   //  const outputElement: HTMLElement | null = document.getElementById("output");
+   //  if (outputElement && this.currentIndex < this.textToPrint.length) {
+   //    outputElement.innerText += this.textToPrint.charAt(this.currentIndex);
+   //    this.currentIndex++;
+   //    setTimeout(this.printNextCharacter, this.printInterval);
+   //  }
+
+
+// }
+
 
 }

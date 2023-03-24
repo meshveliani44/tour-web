@@ -11,8 +11,6 @@ import {client} from "./client.model";
   styleUrls: ['./feedback.component.scss']
 })
 export class FeedbackComponent implements OnInit {
-
-  private iterableNumbers!: Subscription
   isLinear = false;
   firstFormGroup!: FormGroup
   secondFormGroup!: FormGroup
@@ -79,15 +77,7 @@ export class FeedbackComponent implements OnInit {
 
   ngOnInit() {
     this.inidetForms()
-    // this.getInfo()
   }
-
-  // getInfo() {
-  //   this.feedbackService.getUserInfo().subscribe(data => {
-  //     console.log(data)
-  //   })
-  // }
-
 
   sendData(sentData: any) {
     this.feedbackService.sentUserInfo(sentData)

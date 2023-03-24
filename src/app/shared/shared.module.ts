@@ -1,5 +1,5 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import {NgModule} from '@angular/core';
+import {CommonModule} from '@angular/common';
 import {MatInputModule} from "@angular/material/input";
 import {MatIconModule} from "@angular/material/icon";
 import {MatSelectModule} from "@angular/material/select";
@@ -18,11 +18,13 @@ import {MatDatepickerModule} from "@angular/material/datepicker";
 import {HttpClientModule} from "@angular/common/http";
 import {HeaderComponent} from "../header/header.component";
 import {AppRoutingModule} from "../app-routing.module";
+import {MatCardModule} from "@angular/material/card";
+import {TextPrintDirective} from "./text-print.directive";
 
 
 const declarations: any = [
-HeaderComponent
-
+  HeaderComponent,
+  TextPrintDirective
 ];
 
 
@@ -43,9 +45,7 @@ const modules = [
   ReactiveFormsModule,
   MatDatepickerModule,
   HttpClientModule,
-
-
-
+  MatCardModule,
 
 
 ];
